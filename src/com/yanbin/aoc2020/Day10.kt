@@ -31,10 +31,6 @@ private fun puzzle19(joltageRatings: List<Int>) {
     println("puzzle19: $answer")
 }
 
-private fun <K, V> Map<K, V>.addOrReplace(key: K, value: V): Map<K, V> {
-    return HashMap(this).also { it[key] = value }
-}
-
 private fun puzzle20(joltageRatings: List<Int>) {
     val sortedRatings = joltageRatings.sortedDescending()
     val totalRatings = listOf(sortedRatings.last() + 3) + sortedRatings + listOf(0)
